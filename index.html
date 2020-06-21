@@ -21,7 +21,7 @@
         );
         position:relative;
         overflow:hidden;
-        font-family: "Lucida Console", Monaco, monospace;
+        font-family: verdana, /* Windows, MacOS */ /* Fallback options */ arial, /* Windows, MacOS */ helvetica, /* Unix+X, MacOS */ sans-serif;
         color:whitesmoke;
     }
     div#wrapper{
@@ -45,7 +45,10 @@
       -webkit-filter: drop-shadow(5px 5px 5px #222);
       filter: drop-shadow(5px 5px 5px #222);
       animation-play-state: paused;
+    }
 
+    span.ops{
+      color:gold;
     }
 
     img#center:hover{
@@ -68,7 +71,7 @@
 </head>
 <body>
   <div id="wrapper">
-    <h1>CyborgOps</h1>
+    <h1 class='animated slideInLeft'>Cyborg<span class='ops'>Ops</span></h1>
     <img id="center" src='img/logo.png' />
   </div>
   <script type="text/javascript" src="js/jquery.js"></script>
