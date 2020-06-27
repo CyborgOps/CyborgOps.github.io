@@ -24,9 +24,6 @@
         font-family: verdana, /* Windows, MacOS */ /* Fallback options */ arial, /* Windows, MacOS */ helvetica, /* Unix+X, MacOS */ sans-serif;
         color:whitesmoke;
     }
-    div#wrapper{
-      /* position:relative; */
-    }
 
     #wrapper h1 {
       margin-left:36px;
@@ -43,8 +40,29 @@
       left:0;
       opacity:0.6;
       right:0;
+      -webkit-animation:Pulsate 2s linear infinite;
+      -moz-animation:Pulsate 2s linear infinite;
+      animation:Pulsate 2s linear infinite;
       animation-delay:1.5s;
     }
+
+    @-webkit-keyframes Pulsate {
+          from { opacity: 0.8; }
+          30% { opacity: 0.4; }
+          45% { opacity: 0.6; }
+          60% { opacity: 0.4; }
+          to { opacity: 0.8; }
+    }
+
+    @keyframes Pulsate {
+      from { opacity: 0.8; }
+      30% { opacity: 0.4; }
+      45% { opacity: 0.6; }
+      60% { opacity: 0.4; }
+      to { opacity: 0.8; }
+    }
+
+    ::-webkit-scrollbar {display: none;}
 
     span.ops{
       color:#90a4ae;
