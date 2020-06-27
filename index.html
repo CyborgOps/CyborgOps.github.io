@@ -30,6 +30,17 @@
       font-size:2.5em;
     }
 
+    canvas#viz{
+      width:120px;
+      height:120px;
+      position:fixed;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background:black;
+    }
+
     img#center{
       margin:auto;
       height: 360px;
@@ -93,6 +104,7 @@
 <body>
   <div id="wrapper">
     <h1 class='animated slideInLeft'>cyborg<span class='ops animated fadeIn'>OPS</span></h1>
+    <canvas id='viz'></canvas>
     <img id="center" class="animated" src='img/logo.png' />
   </div>
   <script type="text/javascript" src="js/jquery.js"></script>
