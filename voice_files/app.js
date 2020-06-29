@@ -99,6 +99,7 @@ function init() {
 
         soundSource.loop = true;
         soundSource.start();
+        visualize();
       }, function(e){ console.log("Error with decoding audio data" + e.err);});
 
 
