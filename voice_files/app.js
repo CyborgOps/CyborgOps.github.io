@@ -128,16 +128,16 @@ function init() {
      navigator.mediaDevices.getUserMedia (constraints)
         .then(
           function(stream) {
-             source = audioCtx.createMediaStreamSource(stream);
-             source.connect(distortion);
-             distortion.connect(biquadFilter);
-             biquadFilter.connect(gainNode);
-             convolver.connect(gainNode);
-             gainNode.connect(analyser);
-             analyser.connect(audioCtx.destination);
+            //  source = audioCtx.createMediaStreamSource(stream);
+            //  source.connect(distortion);
+            //  distortion.connect(biquadFilter);
+            //  biquadFilter.connect(gainNode);
+            //  convolver.connect(gainNode);
+            //  gainNode.connect(analyser);
+            //  analyser.connect(audioCtx.destination);
 
-          	 visualize();
-             voiceChange();
+          	//  visualize();
+            //  voiceChange();
         })
         .catch( function(err) { console.log('The following gUM error occured: ' + err);})
   } else {
