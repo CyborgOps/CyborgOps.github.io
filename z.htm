@@ -62,8 +62,8 @@
             // This must be hosted on the same server as this page - otherwise you get a Cross Site Scripting error
             let audioUrl = "test.wav";
             // Global variables for the Graphics
-            let canvasWidth  = 512;
-            let canvasHeight = 256;
+            let canvasWidth  = 128;
+            let canvasHeight = 128;
             let ctx;
 
             ctx = document.querySelector('#canvas').getContext('2d');
@@ -154,7 +154,7 @@
             function drawTimeDomain() {
                 clearCanvas();
                 for (let i = 0; i < amplitudeArray.length; i++) {
-                    let value = amplitudeArray[i] / 256;
+                    let value = amplitudeArray[i] / 128;
                     let y = canvasHeight - (canvasHeight * value) - 1;
                     ctx.fillStyle = '#000000';
                     ctx.fillRect(i, y, 1, 1);
