@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://mdn.github.io/voice-change-o-matic/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>Voice-change-O-matic</title>
+	
+	<!--[if le IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="scripts/respond.js"></script>
+    <![endif]-->
+    <link rel="shortcut icon" href="https://mdn.github.io/voice-change-o-matic/favicon.ico" type="image/x-icon">
+    <link href="./voice_files/app.css" rel="stylesheet" type="text/css">
+	
+</head>
+<body>
+  <div class="wrapper">
+    
+    <header>
+      <h1></h1>
+    </header>
+
+    <canvas class="visualizer" width="100" height="100"></canvas> 
+
+    <form class="controls">
+      <div>
+        <label for="voice">Voice setting</label>
+        <select id="voice" name="voice">
+          <option value="distortion">Distortion</option>
+          <option value="convolver">Reverb</option>
+          <option value="biquad">Bass Boost</option>
+          <option value="off" selected="">Off</option>
+        </select>
+      </div>
+      <div>
+        <label for="visual">Visualizer setting</label>
+        <select id="visual" name="visual">
+          <option value="sinewave">Sinewave</option>
+          <option value="frequencybars" selected="">Frequency bars</option>
+          <option value="off">Off</option>
+        </select>
+      </div>
+      <div>
+        <a class="mute">Mute</a>
+      </div>
+    </form>
+
+
+  </div>
+
+    <!-- Below is your custom application script -->
+
+    <script src="./voice_files/app.js"></script>
+	
