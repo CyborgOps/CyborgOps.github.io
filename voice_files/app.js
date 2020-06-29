@@ -91,8 +91,12 @@ function init() {
     audioCtx.decodeAudioData(audioData, function(buffer) {
         soundSource = audioCtx.createBufferSource();
         convolver.buffer = buffer;
-        soundSource.connect(audioCtx.destination);
+
+        soundSource.connect(gainNode);
+        convolver.connect(gainNode);
+        gainNode.connect(analyser);
         analyser.connect(audioCtx.destination);
+
         soundSource.loop = true;
         soundSource.start();
       }, function(e){ console.log("Error with decoding audio data" + e.err);});
