@@ -2,6 +2,7 @@
 
 $(document).ready(function () {
     $('#center').click(function () {
+        $('#signup').show();
         let msg = new SpeechSynthesisUtterance("Welcome to CyborgOps");
         msg.volume = 0.2;
         msg.rate = 1.2;
