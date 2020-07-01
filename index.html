@@ -104,6 +104,42 @@
       right:24px;
     }
   </style>
+  <style>
+    .referlistcontainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #referlistemail {
+      width: 250px;
+      margin-right: 10px;
+      height: 45px;
+      border-radius: 32px;
+      border-color: black;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    #referlistbutton {
+      width: 150px;
+      height: 45px;
+      border: none;
+      border-radius: 32px;
+      font-size: 16px;
+      background-color: black;
+      color: white;
+    }
+    .referlistinnercontainer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 60px;
+      padding-top: 60px;
+    }
+  </style>
 </head>
 <body>
   <div id="wrapper">
@@ -111,16 +147,32 @@
     <canvas id='viz'></canvas>
     <img id="center" class="animated" src='img/logo.png' />
   </div>
-  <div id='signup'><input type="text" id="referlistemail" />
-    <input type="button" id="referlistbutton" value="Join waitlist"/></div>
+
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="module" src="js/main.js"></script>
   <script src="https://referlist.co/resources/referlist.js"
   type="text/javascript"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function(event) {
-      window.referlist.initialize({ domain: 'cyborgops.com' });
-    });
-  </script>
+<!-- Begin referlist signup form -->
+
+
+<div class="referlistcontainer">
+  <div class="referlistinnercontainer">
+    <input
+      type="text"
+      id="referlistemail"
+      placeholder="email@yourcompany.com"
+    />
+    <input type="button" id="referlistbutton" value="Join waitlist" />
+  </div>
+</div>
+
+<script src="https://referlist.co/resources/referlist.js"
+  type="text/javascript"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    window.referlist.initialize({ domain: 'cyborgops' });
+  });
+</script>
+<!-- End referlist signup form -->
 </body>
 </html>
