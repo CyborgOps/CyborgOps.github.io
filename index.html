@@ -6,6 +6,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <title>cyborgOPS - Robots Talking, People Listening</title>
+  <link rel='stylesheet' href='css/typing.css'>
   <link href="css/animate.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <style type='text/css'>
@@ -13,170 +14,56 @@
         width:100%;
         height:100%;
         background: #000428;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to left, #004e92, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to left, #004e92, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        background-image:
+        /* background-image:
         radial-gradient(
             #004e92,
             #000428
-        );
+        ); */
         position:relative;
         overflow:hidden;
         font-family:'Alata', sans-serif;
         color:whitesmoke;
     }
 
-    #wrapper h1 {
-      margin-left:36px;
-      font-size:2.5em;
+    #wrapper {
+      width:60%;
+      min-width:1028px;
+      margin:auto;
+      margin-top:8%;
     }
 
-    canvas#viz{
-      width:120px;
-      height:120px;
-      position:fixed;
-      margin:auto;
-      background:black;
-      display:none;
+    #wrapper h1{
+      font-size:3.6rem;
+      margin-top:36px;
     }
-
-    img#center{
-      margin:auto;
-      height: 360px;
-      width: 360px;
-      position:fixed;
-      top:0;
-      bottom:0;
-      left:0;
-      opacity:0.6;
-      right:0;
-      -webkit-animation:Pulsate 2s linear infinite;
-      -moz-animation:Pulsate 2s linear infinite;
-      animation:Pulsate 2s linear infinite;
+    div.content {
       animation-delay:1s;
-    }
-
-    @-webkit-keyframes Pulsate {
-          from { opacity: 0.8; }
-          30% { opacity: 0.4; }
-          45% { opacity: 0.6; }
-          60% { opacity: 0.4; }
-          to { opacity: 0.8; }
-    }
-
-    @keyframes Pulsate {
-      from { opacity: 0.8; }
-      30% { opacity: 0.4; }
-      45% { opacity: 0.6; }
-      60% { opacity: 0.4; }
-      to { opacity: 0.8; }
+      animation-duration: 2s;
     }
 
     ::-webkit-scrollbar {display: none;}
 
-    span.ops{
-      color:#90a4ae;
-      display:inline-block;
-      animation-delay:1s;
-      animation-duration:0.5s;
-    }
-
-    img#center:hover{
-      opacity:1;
-      filter: none;
-      cursor:pointer;
-      /* -webkit-animation:spin 12s linear infinite;
-      -moz-animation:spin 12s linear infinite;
-      animation:spin 12s linear infinite; */
-      -webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(5px 5px 5px #222);
-    }
-    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
-    ::-webkit-scrollbar {
-        display: none;
-    }
-
-    #signup{
-      display:none;
-    }
-
-    .referlistcontainer {
-
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #referlistemail {
-      width: 250px;
-      margin-right: 10px;
-      height: 45px;
-      border-radius: 8px;
-      border-color: black;
-      font-size: 16px;
-      padding-left: 10px;
-    }
-
-    #referlistbutton {
-      width: 150px;
-      height: 45px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      background-color: black;
-      color: white;
-    }
-
-    .referlistinnercontainer {
-      width: 300px;
-      display: block;
-      flex-direction: row;
-      padding-bottom: 60px;
-      padding-top: 60px;
-      position:fixed;
-      top:24px;
-      right:24px;
-    }
     img#wordmark{
-      width:24rem;
+      width:36rem;
+      margin-top:36px;
+      margin-bottom:24px;
     }
+
   </style>
 </head>
 <body>
   <div id="wrapper">
-    <h1 class='animated slideInLeft'><img src='img/wordmark.png' id='wordmark'/></h1>
-    <canvas id='viz'></canvas>
-    <img id="center" class="animated" src='img/logo.png' />
+    <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
+    <div class='content animated fadeIn'>
+      <div class="type-js headline">
+        <h1 class="text-js">CyborgOps connects your business phone line with your business logic.</h1>
+      </div>
+      <h3 class=''>Our crack team of human operators oversee, manage and train AI reps who interface with your customers over the phone. There's no technology quite like it. </h1>
+      <h3></h3>      
+    </div>
   </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="module" src="js/main.js"></script>
-  <script src="https://referlist.co/resources/referlist.js"
-  type="text/javascript"></script>
-<!-- Begin referlist signup form -->
-
-
-<div class="referlistcontainer" id="signup">
-  <div class="referlistinnercontainer">
-    <input
-      type="text"
-      id="referlistemail"
-      placeholder="email@yourcompany.com"
-    />
-    <input type="button" id="referlistbutton" value="Join waitlist" />
-  </div>
-</div>
-
-<script src="https://referlist.co/resources/referlist.js"
-  type="text/javascript"></script>
-<script>
-  document.addEventListener("DOMContentLoaded", function(event) {
-    window.referlist.initialize({ domain: 'cyborgops' });
-  });
-</script>
-<!-- End referlist signup form -->
 </body>
 </html>
