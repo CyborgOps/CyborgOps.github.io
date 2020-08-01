@@ -33,7 +33,7 @@
     }
 
     #wrapper h1{
-      font-size:3.6rem;
+      font-size:2.8rem;
       margin-top:36px;
     }
     div.content {
@@ -56,14 +56,47 @@
     <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
     <div class='content animated fadeIn'>
       <div class="type-js headline">
-        <h1 class="text-js">CyborgOps connects your business phone line with your business logic.</h1>
-      </div>
-      <h3 class=''>Our crack team of human operators oversee, manage and train AI reps who interface with your customers over the phone. There's no technology quite like it. </h1>
-      <h3></h3>      
+        <h1 class="text-js">We connect your business phone lines with your business logic.</h1>
+      </div>   
     </div>
   </div>
 
   <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="module" src="js/main.js"></script>
+  <script type='text/javascript'>
+  
+function autoType(elementClass, typingSpeed){
+  var thhis = $(elementClass);
+  thhis.css({
+    "position": "relative",
+    "display": "inline-block"
+  });
+  //thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+  thhis = thhis.find(".text-js");
+  var text = thhis.text().trim().split('');
+  var amntOfChars = text.length;
+  var newString = "";
+  thhis.text("|");
+  setTimeout(function(){
+    thhis.css("opacity",1);
+    thhis.prev().removeAttr("style");
+    thhis.text("");
+    for(var i = 0; i < amntOfChars; i++){
+      (function(i,char){
+        setTimeout(function() {        
+          newString += char;
+          thhis.text(newString);
+        },i*typingSpeed);
+      })(i+1,text[i]);
+    }
+  },1500);
+}
+
+$(document).ready(function(){
+  // Now to start autoTyping just call the autoType function with the 
+  // class of outer div
+  // The second paramter is the speed between each letter is typed.   
+  autoType(".type-js",25);
+});
+  </script>
 </body>
 </html>
