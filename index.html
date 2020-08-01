@@ -102,14 +102,14 @@
     #signup{
       display:none;
     }
-  </style>
-  <style>
+
     .referlistcontainer {
 
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+
     #referlistemail {
       width: 250px;
       margin-right: 10px;
@@ -119,6 +119,7 @@
       font-size: 16px;
       padding-left: 10px;
     }
+
     #referlistbutton {
       width: 150px;
       height: 45px;
@@ -128,6 +129,7 @@
       background-color: black;
       color: white;
     }
+
     .referlistinnercontainer {
       width: 300px;
       display: block;
@@ -138,11 +140,14 @@
       top:24px;
       right:24px;
     }
+    img#wordmark{
+      width:24rem;
+    }
   </style>
 </head>
 <body>
   <div id="wrapper">
-    <h1 class='animated slideInLeft'>cyborg<span class='ops animated fadeIn'>OPS</span></h1>
+    <h1 class='animated slideInLeft'><img src='img/wordmark.png' id='wordmark'/></h1>
     <canvas id='viz'></canvas>
     <img id="center" class="animated" src='img/logo.png' />
   </div>
