@@ -22,14 +22,14 @@
 
     #wrapper {
       width:60%;
-      min-width:780px;
+      min-width:380px;
       max-width:1200px;
       margin:auto;
       margin-top:2%;
     }
 
     #wrapper h1{
-      font-size:2rem;
+      font-size:1.8rem;
       color:#ddd;
     }
     div.content {
@@ -40,7 +40,9 @@
     ::-webkit-scrollbar {display: none;}
 
     img#wordmark{
-      width:36rem;
+      max-width:412px;
+      min-width:128px;
+
       margin-top:64px;
       margin-bottom:76px;
       margin-left:-8px;
@@ -56,13 +58,14 @@
 <body>
   <div id="wrapper">
     <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
-    <div class='content animated fadeIn'>
+    <div class='content'>
       <h1 id='typer'></h1>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-  <script type="text/javascript" src="js/jquery.js"></script>
+  <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
   <script type='text/javascript'>
+
   new TypeIt("#typer", {
     strings: [
       "We build AI voicebots for businesses, powered by the latest advances in AI and backed by a crack team of human operators. <br>",
@@ -71,8 +74,7 @@
       "If you want your phones to stop ringing, but the business to keep coming, please <a href='#touch'>get in touch</a> and schedule a demo."],
     speed: 50,
     breakLines: true,
-    nextStringDelay: 1000,
-    waitUntilVisible: true
+    nextStringDelay: 1000
   }).go();
   </script>
 </body>
