@@ -17,14 +17,13 @@
         height:100%;
         background: #000428;  /* fallback for old browsers */
         position:relative;
-        overflow:hidden;
         font-family:'Alata', sans-serif;
         color:whitesmoke;
     }
 
     #wrapper {
       width:60%;
-      min-width:380px;
+      min-width:480px;
       max-width:1200px;
       margin:auto;
       margin-top:2%;
@@ -39,7 +38,7 @@
       animation-duration: 2s;
     }
 
-    ::-webkit-scrollbar {display: none;}
+    /* ::-webkit-scrollbar {display: none;} */
 
     img#wordmark{
       max-width:412px;
@@ -114,7 +113,7 @@
     <div class='nav animated fadeIn'>
       <a href='#product'>PRODUCT</a> <a href='#technology'>TECHNOLOGY</a> <a href='#operators'>OPERATORS</a> <a href='#pricing'>PRICING</a>
     </div>
-    <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
+    <a href='#about'><img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/></a>
 
     <div class='content'>
       <h1 id='typer'></h1>
@@ -125,7 +124,7 @@
   
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
   <script type='text/javascript'>
-  new TypeIt("#typer", {
+  let typer = new TypeIt("#typer", {
     strings: [
       "We build voicebots for businesses, powered by the latest advances in artificial intelligence and managed & trained by our crack team of human operators. <br>",
       "Our technology is easy to deploy, will delight your customers, boost your revenue, shrink your labor costs and make your team safer and more productive.<br>", 
@@ -135,6 +134,32 @@
     breakLines: true,
     nextStringDelay: 1000
   }).go();
+
+  const promptMap = {
+    product: ['Every business that gets a lot of calls knows very well the trade off in answering the call or working on your business. '],
+    about: [
+      "We build voicebots for businesses, powered by the latest advances in artificial intelligence and managed & trained by our crack team of human operators. <br>",
+      "Our technology is easy to deploy, will delight your customers, boost your revenue, shrink your labor costs and make your team safer and more productive.<br>", 
+      "We can handle tee times at your <a href='#golf'>golf courses</a>, reservations for your <a href='#hospitality'>hotel rooms</a>, orders for your <a href='#restaurant'>restaurant</a>, appointments at your <a href='#salon'>barbershop</a>, checkup on your patients, conduct phone surveys and we do it over your current phone and web systems.<br>", 
+      "If you want your phones to stop ringing, but the business to keep coming, please <a href='#touch'>get in touch</a> and schedule a demo."]
+  }
+
+  function typeIt (strings) {
+    document.getElementById('typer').innerHTML = '';
+    typer.reset();
+    typer = new TypeIt("#typer", {
+    strings: strings,
+    speed: 50,
+    breakLines: true,
+    nextStringDelay: 1000
+  }).go();
+    // typer.go();
+  }
+  window.onhashchange = url => {
+    console.log(url.newURL);
+    let newHash = url.newURL.split('#')[1];
+    typeIt(promptMap[newHash]);
+  }
   </script>
 </body>
 </html>
