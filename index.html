@@ -79,6 +79,15 @@
 
     div.content{
       text-align:justify;
+      
+    }
+
+    img#learning {
+      position:fixed;
+      bottom:-0px;
+      width:15%;
+      left:20%;
+      transform: rotate(-90deg); 
     }
 
     div#footer{
@@ -100,15 +109,17 @@
 </head>
 <body>
   <div id="wrapper">
-    <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
     <div class='nav animated fadeIn'>
       <a href='#product'>PRODUCT</a> <a href='#technology'>TECHNOLOGY</a> <a href='#operators'>OPERATORS</a> <a href='#pricing'>PRICING</a>
     </div>
+    <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
+
     <div class='content'>
       <h1 id='typer'></h1>
     </div>
     <div id='footer' class='animated slideInUp'>COPYRIGHT © 2020 - CYBORGOPS, INC. ALL RIGHTS RESERVED.</div>
   </div>
+  <img id='learning' src='img/graph.png' />
   
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
   <script type='text/javascript'>
