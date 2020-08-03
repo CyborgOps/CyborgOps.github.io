@@ -31,7 +31,7 @@
     }
 
     #wrapper h1{
-      font-size:1.8rem;
+      font-size:1.6rem;
       color:#ddd;
     }
     div.content {
@@ -81,6 +81,18 @@
       text-align:justify;
     }
 
+    div#footer{
+      width:60%;
+      margin:auto;
+      position:fixed;
+      bottom:12px;
+      min-width: 380px;
+      max-width: 1200px;
+      padding-top:12px;
+      border-top:1px solid #2196f3;
+      font-family: 'Montserrat', sans-serif;
+    }
+
   </style>
 </head>
 <body>
@@ -92,7 +104,9 @@
     <div class='content'>
       <h1 id='typer'></h1>
     </div>
+    <div id='footer'>Copyright © 2020 - CyborgOps, Inc.</div>
   </div>
+  
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
   <script type='text/javascript'>
   new TypeIt("#typer", {
