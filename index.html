@@ -10,6 +10,7 @@
   <link rel="shortcut icon" href="favicon.ico">
   <link href="css/animate.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   <style type='text/css'>
     html,body {
         width:100%;
@@ -54,22 +55,41 @@
       padding:2rem;
     }
 
+    div.nav{
+      float:right;
+      font-family: 'Montserrat', sans-serif;
+      padding-right:30px;
+      margin-top:86px;
+    }
+
+    div.nav a{
+      color:#e3f2fd;
+      text-decoration:none;
+      display:inline-block;
+      padding:6px;
+    }
+
+    div.nav a:hover{
+      color:#2196f3;
+    }
+
   </style>
 </head>
 <body>
   <div id="wrapper">
     <img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/>
+    <div class='nav animated fadeIn'>
+      <a href='#product'>PRODUCT</a> <a href='#technology'>TECHNOLOGY</a>  <a href='#customers'>PRICING</a> <a href='#operators'>OPERATORS</a>
+    </div>
     <div class='content'>
       <h1 id='typer'></h1>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-  <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
   <script type='text/javascript'>
-
   new TypeIt("#typer", {
     strings: [
-      "We build voicebots for businesses, powered by the latest advances in artificial intelligence and backed by a crack team of human operators. <br>",
+      "We build voicebots for businesses, powered by the latest advances in artificial intelligence and managed & trained by our crack team of human operators. <br>",
       "Our technology is easy to deploy, will delight your customers, boost your revenue, shrink your labor costs and make your team safer and more productive.<br>", 
       "We can handle tee times at your <a href='#golf'>golf courses</a>, reservations for your <a href='#hospitality'>hotel rooms</a>, orders for your <a href='#restaurant'>restaurant</a>, appointments at your <a href='#salon'>barbershop</a>, checkup on your patients, conduct phone surveys and we do it over your current phone and web systems.<br>", 
       "If you want your phones to stop ringing, but the business to keep coming, please <a href='#touch'>get in touch</a> and schedule a demo."],
