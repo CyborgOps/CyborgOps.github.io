@@ -47,7 +47,6 @@
 
       margin-top:64px;
       margin-bottom:76px;
-      margin-left:-8px;
     }
 
     h2.contact{
@@ -84,19 +83,21 @@
 
     img#learning {
       position:fixed;
-      bottom:-40px;
+      bottom:-0px;
       width:15%;
-      left:-34px;
+      right:24%;
       transform: rotate(-90deg); 
+      animation-delay:1s;
     }
 
     div#footer{
       width:60%;
       margin:auto;
+      margin-right:-12px;
       position:fixed;
-      bottom:12px;
+      bottom:36px;
       min-width: 380px;
-      text-align:center;
+      text-align:left;
       max-width: 1200px;
       padding-top:12px;
       animation-delay:1s;
@@ -117,9 +118,9 @@
     <div class='content'>
       <h1 id='typer'></h1>
     </div>
-    <div id='footer' class='animated slideInUp'>COPYRIGHT © 2020 - CYBORGOPS, INC. ALL RIGHTS RESERVED.</div>
+    <div id='footer' class='animated fadeIn'>COPYRIGHT © 2020 - CYBORGOPS, INC. ALL RIGHTS RESERVED.</div>
   </div>
-  <img id='learning' src='img/graph.png' />
+  <img id='learning' class='animated fadeIn' src='img/graph.png' />
   
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
   <script type='text/javascript'>
