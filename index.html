@@ -19,6 +19,9 @@
         position:relative;
         font-family:'Alata', sans-serif;
         color:whitesmoke;
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
     }
 
     #wrapper {
@@ -36,6 +39,10 @@
     div.content {
       animation-delay:1s;
       animation-duration: 2s;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
     }
 
     /* ::-webkit-scrollbar {display: none;} */
@@ -106,6 +113,11 @@
       font-size:10pt;
     }
 
+    div.quote{
+      padding:12px;
+      font-size:14pt;
+    }
+
   </style>
 </head>
 <body>
@@ -114,7 +126,6 @@
       <a href='#product'>PRODUCT</a> <a href='#technology'>TECHNOLOGY</a> <a href='#operators'>OPERATORS</a> <a href='#pricing'>PRICING</a>
     </div>
     <a href='#about'><img class='animated slideInLeft'src='img/wordmark.png' id='wordmark'/></a>
-
     <div class='content'>
       <h1 id='typer'></h1>
     </div>
@@ -141,7 +152,8 @@
       "We build voicebots for businesses, powered by the latest advances in artificial intelligence and managed & trained by our crack team of human operators. <br>",
       "Our technology is easy to deploy, will delight your customers, boost your revenue, shrink your labor costs and make your team safer and more productive.<br>", 
       "We can handle tee times at your <a href='#golf'>golf courses</a>, reservations for your <a href='#hospitality'>hotel rooms</a>, orders for your <a href='#restaurant'>restaurant</a>, appointments at your <a href='#salon'>barbershop</a>, checkup on your patients, conduct phone surveys and we do it over your current phone and web systems.<br>", 
-      "If you want your phones to stop ringing, but the business to keep coming, please <a href='#touch'>get in touch</a> and schedule a demo."]
+      "If you want your phones to stop ringing, but the business to keep coming, please <a href='#touch'>get in touch</a> and schedule a demo."],
+    technology: ["<div class='quote'><i>Consider a future device …  in which an individual stores all his books, records, and communications, and which is mechanized so that it may be consulted with exceeding speed and flexibility. It is an enlarged intimate supplement to his memory.</i> - Vannevar Bush</div><br>", "In a powerful essay that shaped the future, Vannevar Bush, "]
   }
 
   function typeIt (strings) {
