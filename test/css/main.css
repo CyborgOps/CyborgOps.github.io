@@ -166,6 +166,10 @@ nav a:hover {
     font-size: 1.6em;
 }
 
+.main article p {
+    font-size: 20px;
+}
+
 .main aside {
     color: white;
     padding: 0px 5% 10px;
@@ -292,7 +296,7 @@ header h1 a{
 
     .main article {
         float: left;
-        width: 95%;
+        width: 60%;
     }
 
     .main aside {
