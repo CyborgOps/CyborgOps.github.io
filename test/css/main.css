@@ -60,7 +60,7 @@ body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
     font-family:'Alata', sans-serif;
     background:#000428;
-    color:whitesmoke;
+    color:#F7FCFC;
     line-height: 2em;
 }
 
@@ -89,8 +89,18 @@ body {
 }
 
 .title {
-    color: white;
+    color: #F7FCFC;
 }
+
+img#cyborg {
+    position:fixed;
+    bottom:0px;
+    width:20%;
+    left:0%;
+    /* transform: rotate(90deg) scaleX(-1);
+    -webkit-transform: rotate(90deg) scaleX(-1); */
+    animation-delay:1s;
+  }
 
 img#learning {
     position:fixed;
@@ -131,13 +141,13 @@ nav a {
     text-decoration: none;
     font-weight: bold;
 
-    color: white;
+    color: #F7FCFC;
     /* background: #e44d26; */
 }
 
 nav a:hover,
 nav a:visited {
-    color: white;
+    color: #F7FCFC;
 }
 
 nav a:hover {
