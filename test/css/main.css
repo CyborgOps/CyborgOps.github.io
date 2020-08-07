@@ -162,7 +162,7 @@ nav a:hover {
 }
 
 footer {
-    color: white;
+    color: rgba(255,255,255,0.5);
     padding:12px;
     padding-left:24px;
     position:fixed;
