@@ -16,6 +16,28 @@ html {
     text-shadow: none;
 }
 
+div.nav ul{
+    list-style: none;
+    border-top:1px solid #2196f3;
+    border-bottom:1px solid #2196f3;
+    margin:1%;
+    top:86px;
+    left:30%;
+    right:1%;
+    position:absolute;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.nav ul li{
+    display:inline;
+}
+
+div.nav ul li a{
+    color: #b3d4fc;
+    text-decoration: none;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -118,6 +140,7 @@ img#wordmark{
     left:12px; */
     width:96%;
     margin:2%;
+
   }
 /* ==============
     MOBILE: Menu
@@ -198,10 +221,11 @@ footer {
    ========================================================================== */
 
 header h1{
-       font-size: 4em !important;
+       font-size: 3em !important;
        line-height: 1.6em !important;
        font-family: 'Alata';
        text-align:center;
+       padding-top:180px;
 }
 
 header h1 a{
@@ -218,9 +242,11 @@ header h1 a{
 @media only screen and (min-width: 480px) {
     img#wordmark{
         width:90%;
-        margin-top:64px;
-        margin-bottom:76px;
       }
+
+      div.nav ul{
+        top:86px;
+    }
 
 /* ====================
     INTERMEDIATE: Menu
@@ -256,7 +282,9 @@ header h1 a{
 }
 
 @media only screen and (min-width: 768px) {
-
+    div.nav ul{
+        top:0px;
+    }
 /* ====================
     WIDE: CSS3 Effects
    ==================== */
@@ -271,10 +299,7 @@ header h1 a{
     img#wordmark{
         max-width:412px;
         min-width:128px;
-        width:100%;
-        position: relative;
-        margin-top:24px;
-        margin-left:24px;
+
       }
 
 /* ============

@@ -1,7 +1,7 @@
 
   let typer = new TypeIt("#typer", {
     strings: [
-      "CyborgOps builds human-assisted voicebots for businesses, powered by the latest advances in artificial intelligence and managed & trained by our crack team of human operators. <br>",
+      "We've built the phone system your business needs and your customers want. Our human supervised AI reps .<br>",
       "Our technology is easy to deploy, will delight your customers, boost your revenue, shrink your labor costs and make your team safer and more productive.<br>"],
     speed: 50,
     breakLines: true,
